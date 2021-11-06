@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Rounded-Bold.otf">
+            <string>SFProRounded-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailNewsViewController" customModule="eNews" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="fBb-EM-PRH" id="reC-oX-8y8"/>
+                <outlet property="headerView" destination="NMk-z9-1A7" id="L9w-I2-t0W"/>
+                <outlet property="view" destination="xFU-yl-Zch" id="iE8-24-cxq"/>
+                <outlet property="webView" destination="PjK-ZP-xfa" id="kAL-Oz-mry"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="xFU-yl-Zch">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6H6-Nb-Tko">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1Y-Jj-v1h">
+                    <rect key="frame" x="0.0" y="124" width="414" height="738"/>
+                    <subviews>
+                        <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PjK-ZP-xfa">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="738"/>
+                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </webView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="PjK-ZP-xfa" firstAttribute="leading" secondItem="d1Y-Jj-v1h" secondAttribute="leading" id="N2z-bL-dM4"/>
+                        <constraint firstAttribute="bottom" secondItem="PjK-ZP-xfa" secondAttribute="bottom" id="NKN-r8-1bT"/>
+                        <constraint firstAttribute="trailing" secondItem="PjK-ZP-xfa" secondAttribute="trailing" id="k1Z-ar-Zrg"/>
+                        <constraint firstItem="PjK-ZP-xfa" firstAttribute="top" secondItem="d1Y-Jj-v1h" secondAttribute="top" id="qSY-dD-ERj"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NMk-z9-1A7">
+                    <rect key="frame" x="0.0" y="48" width="414" height="76"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBb-EM-PRH">
+                            <rect key="frame" x="0.0" y="0.0" width="56" height="76"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="76" id="DXI-3N-gDC"/>
+                                <constraint firstAttribute="width" constant="56" id="V2n-cu-fCj"/>
+                            </constraints>
+                            <state key="normal">
+                                <imageReference key="image" image="ic_back_button" symbolScale="large" renderingMode="original"/>
+                            </state>
+                            <connections>
+                                <action selector="backButtonTapped:" destination="-2" eventType="touchUpInside" id="58k-43-hHg"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Out More" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dl4-aV-hzB">
+                            <rect key="frame" x="56" y="23.5" width="302" height="29"/>
+                            <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Dl4-aV-hzB" firstAttribute="leading" secondItem="fBb-EM-PRH" secondAttribute="trailing" id="528-CL-aPZ"/>
+                        <constraint firstItem="fBb-EM-PRH" firstAttribute="leading" secondItem="NMk-z9-1A7" secondAttribute="leading" id="5Yb-t0-1bS"/>
+                        <constraint firstItem="Dl4-aV-hzB" firstAttribute="centerY" secondItem="NMk-z9-1A7" secondAttribute="centerY" id="7AQ-dK-mmy"/>
+                        <constraint firstItem="Dl4-aV-hzB" firstAttribute="centerX" secondItem="NMk-z9-1A7" secondAttribute="centerX" id="Ogb-uD-ASG"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Dl4-aV-hzB" secondAttribute="trailing" constant="55" id="Qo5-SO-oqh"/>
+                        <constraint firstItem="fBb-EM-PRH" firstAttribute="top" secondItem="NMk-z9-1A7" secondAttribute="top" id="Qoz-cf-vqX"/>
+                        <constraint firstAttribute="bottom" secondItem="fBb-EM-PRH" secondAttribute="bottom" id="d9S-MS-nAT"/>
+                        <constraint firstAttribute="height" constant="76" id="rl8-rP-6ag"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Ayt-SN-W50"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="d1Y-Jj-v1h" firstAttribute="trailing" secondItem="Ayt-SN-W50" secondAttribute="trailing" id="0Ng-8Z-sQx"/>
+                <constraint firstItem="NMk-z9-1A7" firstAttribute="trailing" secondItem="Ayt-SN-W50" secondAttribute="trailing" id="6bW-6V-zpm"/>
+                <constraint firstItem="6H6-Nb-Tko" firstAttribute="leading" secondItem="Ayt-SN-W50" secondAttribute="leading" id="8ww-4i-Kip"/>
+                <constraint firstItem="NMk-z9-1A7" firstAttribute="leading" secondItem="Ayt-SN-W50" secondAttribute="leading" id="Arv-OU-vS5"/>
+                <constraint firstItem="NMk-z9-1A7" firstAttribute="top" secondItem="Ayt-SN-W50" secondAttribute="top" constant="4" id="UHT-Be-zZP"/>
+                <constraint firstItem="d1Y-Jj-v1h" firstAttribute="top" secondItem="NMk-z9-1A7" secondAttribute="bottom" id="aPS-yV-NoZ"/>
+                <constraint firstItem="d1Y-Jj-v1h" firstAttribute="bottom" secondItem="Ayt-SN-W50" secondAttribute="bottom" id="kix-Ju-Zd6"/>
+                <constraint firstItem="6H6-Nb-Tko" firstAttribute="trailing" secondItem="Ayt-SN-W50" secondAttribute="trailing" id="lHZ-6S-yMS"/>
+                <constraint firstItem="NMk-z9-1A7" firstAttribute="top" secondItem="6H6-Nb-Tko" secondAttribute="bottom" id="oSx-Uf-Kiq"/>
+                <constraint firstItem="d1Y-Jj-v1h" firstAttribute="leading" secondItem="Ayt-SN-W50" secondAttribute="leading" id="okU-nk-7i0"/>
+                <constraint firstItem="6H6-Nb-Tko" firstAttribute="top" secondItem="xFU-yl-Zch" secondAttribute="top" id="ueL-st-W7L"/>
+            </constraints>
+            <point key="canvasLocation" x="44.927536231884062" y="45.535714285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_back_button" width="11" height="19"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

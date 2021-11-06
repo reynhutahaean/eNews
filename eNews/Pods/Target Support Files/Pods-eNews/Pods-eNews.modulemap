@@ -1,0 +1,6 @@
+framework module Pods_eNews {
+  umbrella header "Pods-eNews-umbrella.h"
+
+  export *
+  module * { export * }
+}
